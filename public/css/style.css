@@ -1,0 +1,13 @@
+body.container{
+    background: url("../images/hd.png") no-repeat; 
+}
+section.hero{
+    /* background: url("../images/hd.png") no-repeat; */
+}
+.color_primary{
+    color: #55acee;
+}
+.color_dark{
+    color: #333;
+}
+

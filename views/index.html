@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+	<html>
+	
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>{{.user.FirstName}} {{.user.LastName}}</title>
+		<!-- bulma css framework CDN -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="public/css/style.css"/>
+	</head>
+	
+	<body class="container">
+		<!-- begining of the header  -->
+		<header>
+			<nav class="navbar">
+				<div class="navbar-brand">  
+					<a class="navbar-item is-hidden-desktop" href="{{.user.Github}}" target="_blank">
+						<span class="icon" >
+							<i class="fa fa-github"></i>
+						</span>
+					</a>
+					<a class="navbar-item is-hidden-desktop" href="{{.user.Twitter}}" target="_blank">
+						<span class="icon color_primary">
+							<i class="fa fa-twitter"></i>
+						 </span>
+					</a>
+				</div>
+				<div id="navMenubd-example" class="navbar-menu">
+					<div class="navbar-end">
+						<a class="navbar-item is-hidden-desktop-only"  href="{{.user.Github}}" target="_blank">
+							  <span class="icon color_dark">
+								<i class="fa fa-github"></i>
+							  </span>
+						</a>
+						<a class="navbar-item is-hidden-desktop-only" href="{{.user.Twitter}}" target="_blank">
+							  <span class="icon color_primary">
+								<i class="fa fa-twitter"></i>
+							  </span>
+						</a>
+						<div class="navbar-item">
+							<p class="control">
+								<a class="button is-dark" target="_blank" href="public/resume.pdf">
+									<span class="icon">
+									  <i class="fa fa-download"></i>
+									</span>
+									<span>Resume</span>
+								</a>
+							</p>                        
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!-- Ending of the header -->
+	
+		<main>
+				<!-- page title -->
+				<section class="hero">
+					<div class="hero-body">
+						<div class="container">
+								<article class="media">
+										<figure class="media-left">
+										  <p class="image is-128x128">
+											<img src="public/images/myPic.jpg">
+										  </p>
+										</figure>
+										<div class="media-content">
+										  <div class="content">
+											<p>
+												<h1 class="title has-text-white">Sravan Kumar Kilaru</h1>
+												<h2 class="subtitle has-text-white">Software Engineer</h2>                                          
+											</p>
+										  </div>                                      
+										</div>                                    
+									  </article>
+						</div>
+					</div>
+				</section>
+				<!-- Education details Section -->
+			   <section class="section">
+				   <div class="box">
+					<article class="media">
+							<figure class="media-left">
+							  <p class="image is-64x64">
+								<img src="public/images/education1.png">
+							  </p>
+							</figure>
+							<div class="media-content">
+							  <div class="content">
+								<p>
+								  <strong>Education</strong> <small>Details</small>                                                         
+								</p>
+								<ul>
+									<li><strong>Northwest Missouri State University</strong><small>, Masters in Applied Computer Science</small></li>
+									<li><strong>Gandhi Institute of Technology and Management</strong><small>, Bachelors in Computer Science</small></li>
+								</ul>
+							  </div>                          
+							</div>                        
+						  </article>
+				   </div>
+				   <!-- work Experience article -->
+				   <div class="box">
+					<article class="media">
+							<figure class="media-left">
+							  <p class="image is-64x64">
+								<img src="public/images/work.jpg">
+							  </p>
+							</figure>
+							<div class="media-content">
+							  <div class="content">
+								<p>
+								  <strong>Work</strong> <small>Experience</small>                                                         
+								</p>
+								<ul>
+									<li><strong>PowerSchool Inc</strong><small>, UI developer</small> <small>FEB-2017 to AUG-2017</small></li>
+									<li><strong>Pegasys Information Systems</strong><small> Software Engineer</small><small> FEB-2016 to JAN-2017</small></li>
+									<li><strong>Northwest Missouri State University</strong><small> Software Engineer</small><small> JUNE-2015 to DEC-2015</small></li>
+									<li><strong>CelleC Games</strong><small> Intern Programmer</small><small> APRIL-2015 to JUNE-2015</small></li>
+								</ul>
+							  </div>                          
+							</div>                        
+						  </article>
+				   </div>
+						 
+			   </section>
+			   <!-- projects -->
+			   <!-- project 1 -->
+			   <section class="section">
+				   <p> <h1 class="title">Projects</h1></p>   
+				   <div class="columns">           
+					<div class="column">
+							<div class="card">
+									<header class="card-header">
+									  <p class="card-header-title">
+										Portifolio
+									  </p>                                  
+									</header>
+									<div class="card-content">
+									  <div class="content">
+										Portifolio website build using bluma.io CSS Framework. 
+										<a>@bulmaio</a>. <a>#css</a> <a>#responsive</a>
+										<br>
+										<small>11:09 PM - 1 Jan 2016</small>
+									  </div>
+									</div>
+									<footer class="card-footer">
+									  <a class="card-footer-item">link to GitHub repo</a>                                  
+									</footer>
+								  </div>
+					</div>
+					<!-- project 2 -->
+					<div class="column">
+							<div class="card">
+									<header class="card-header">
+									  <p class="card-header-title">
+										Movie Trailer website
+									  </p>                                  
+									</header>
+									<div class="card-content">
+									  <div class="content">
+										 Movie Trailer website build with python reading data from json file an Udacity nanodegree project.                                    
+										<br>
+										<small>August 27th , 2017</small>
+									  </div>
+									</div>
+									<footer class="card-footer">
+									  <a class="card-footer-item" href="https://github.com/kilarusravankumar/Movie-Trailer-website">link to GitHub repo</a>                                  
+									</footer>
+								  </div>
+					</div>
+				   </div>
+					
+			   </section>
+			   
+			   
+		</main>
+		<!-- footer -->
+		<footer class="footer is-dark">
+			<div class="container">
+				<div class="content has-text-centered">
+					<p>
+						<a class="icon" href="{{.user.GithubURL}}">
+							<i class="fa fa-github"></i><strong>GitHub</strong>
+						</a>
+					</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+	
+	</html>
