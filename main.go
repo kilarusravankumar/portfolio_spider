@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"portfolio_spider/userdata"
 	"regexp"
 
@@ -37,12 +38,27 @@ func newApp() *iris.Application {
 }
 
 func index(ctx iris.Context) {
+	mastersEducation := userdata.Education{
+		SchoolName: "Northwest Missouri State University",
+		Degree:     "Masters in Applied Computer science",
+		GradDate:   "2015",
+	}
+	bachelorsEducation := userdata.Education{
+		SchoolName: "Gandhi Institute of Technology",
+		Degree:     "Bachelors in Computer science",
+		GradDate:   "2014",
+	}
+
+	education := []userdata.Education{mastersEducation, bachelorsEducation}
 	user := userdata.User{
 		FirstName: "Sravan",
 		LastName:  "Kilaru",
 		Github:    "https://github.com/kilarusravankumar",
 		Twitter:   "https://twitter.com/sravan2331993",
+		Education: education,
 	}
+	fmt.Println(user)
+
 	ctx.ViewData("user", user)
 	ctx.View("index.html")
 }

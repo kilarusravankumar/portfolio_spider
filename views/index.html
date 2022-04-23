@@ -94,8 +94,10 @@
 								  <strong>Education</strong> <small>Details</small>                                                         
 								</p>
 								<ul>
-									<li><strong>Northwest Missouri State University</strong><small>, Masters in Applied Computer Science</small></li>
-									<li><strong>Gandhi Institute of Technology and Management</strong><small>, Bachelors in Computer Science</small></li>
+									
+									{{range .user.Education}}
+									<li><strong>{{.SchoolName}}</strong><small>, {{.Degree}} - {{.GradDate}}</small></li>
+									{{end}}
 								</ul>
 							  </div>                          
 							</div>                        
