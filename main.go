@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"portfolio_spider/userdata"
 	"regexp"
 
@@ -50,14 +49,30 @@ func index(ctx iris.Context) {
 	}
 
 	education := []userdata.Education{mastersEducation, bachelorsEducation}
+
+	description := []string{}
+
+	description = append(description, "Build and maintain a data platform by utilizing Go, docker, and MongoDB for the department of pathology. Rendered analytical support in maintaining and upgrading existing department of pathology website using React and PHP.")
+	description = append(description, "Designed and deployed scalable web applications by using React SSR for the University of Michigan and vendors")
+	description = append(description, "Supported team members in pathology specimen tracking tool built by using react, Node, Express, web Sockets, and	docker")
+
+	work1 := userdata.WorkExperience{
+		CompanyName: "Michigan Medicine",
+		JobTitle:    "Application Programmer",
+		StartDate:   "October 2018",
+		EndDate:     "Present",
+		Location:    "Ann Arbor, MI",
+		Description: description,
+	}
+
 	user := userdata.User{
 		FirstName: "Sravan",
 		LastName:  "Kilaru",
 		Github:    "https://github.com/kilarusravankumar",
 		Twitter:   "https://twitter.com/sravan2331993",
 		Education: education,
+		Work:      []userdata.WorkExperience{work1},
 	}
-	fmt.Println(user)
 
 	ctx.ViewData("user", user)
 	ctx.View("index.html")

@@ -116,12 +116,25 @@
 								<p>
 								  <strong>Work</strong> <small>Experience</small>                                                         
 								</p>
-								<ul>
-									<li><strong>PowerSchool Inc</strong><small>, UI developer</small> <small>FEB-2017 to AUG-2017</small></li>
-									<li><strong>Pegasys Information Systems</strong><small> Software Engineer</small><small> FEB-2016 to JAN-2017</small></li>
-									<li><strong>Northwest Missouri State University</strong><small> Software Engineer</small><small> JUNE-2015 to DEC-2015</small></li>
-									<li><strong>CelleC Games</strong><small> Intern Programmer</small><small> APRIL-2015 to JUNE-2015</small></li>
-								</ul>
+								{{range .user.Work}}
+								<div class="card">
+									<header class="card-header">
+									  <p class="card-header-title">
+										{{.CompanyName}}, {{.Location}}										
+									  </p>
+									</header>
+									<div class="card-content">
+									  <div class="content">
+										<time datetime="2016-1-1">{{.StartDate}}-{{.EndDate}}</time>
+										  <ul>
+											{{range .Description}}
+											<li>{{.}}</li>
+											{{end}}
+											</ul>
+									  </div>
+									</div>
+								  </div>
+								  {{end}}
 							  </div>                          
 							</div>                        
 						  </article>
@@ -130,52 +143,6 @@
 			   </section>
 			   <!-- projects -->
 			   <!-- project 1 -->
-			   <section class="section">
-				   <p> <h1 class="title">Projects</h1></p>   
-				   <div class="columns">           
-					<div class="column">
-							<div class="card">
-									<header class="card-header">
-									  <p class="card-header-title">
-										Portifolio
-									  </p>                                  
-									</header>
-									<div class="card-content">
-									  <div class="content">
-										Portifolio website build using bluma.io CSS Framework. 
-										<a>@bulmaio</a>. <a>#css</a> <a>#responsive</a>
-										<br>
-										<small>11:09 PM - 1 Jan 2016</small>
-									  </div>
-									</div>
-									<footer class="card-footer">
-									  <a class="card-footer-item">link to GitHub repo</a>                                  
-									</footer>
-								  </div>
-					</div>
-					<!-- project 2 -->
-					<div class="column">
-							<div class="card">
-									<header class="card-header">
-									  <p class="card-header-title">
-										Movie Trailer website
-									  </p>                                  
-									</header>
-									<div class="card-content">
-									  <div class="content">
-										 Movie Trailer website build with python reading data from json file an Udacity nanodegree project.                                    
-										<br>
-										<small>August 27th , 2017</small>
-									  </div>
-									</div>
-									<footer class="card-footer">
-									  <a class="card-footer-item" href="https://github.com/kilarusravankumar/Movie-Trailer-website">link to GitHub repo</a>                                  
-									</footer>
-								  </div>
-					</div>
-				   </div>
-					
-			   </section>
 			   
 			   
 		</main>

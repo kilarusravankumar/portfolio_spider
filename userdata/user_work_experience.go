@@ -2,13 +2,9 @@ package userdata
 
 type WorkExperience struct {
 	CompanyName string
+	Location    string
 	JobTitle    string
 	StartDate   string
 	EndDate     string
-	Projects    []Project
-}
-
-type Project struct {
-	Name        string
-	ProjectDesc []string
+	Description []string
 }
