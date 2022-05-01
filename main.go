@@ -1,6 +1,7 @@
 package main
 
 import (
+	"portfolio_spider/input_reader"
 	"portfolio_spider/userdata"
 	"regexp"
 
@@ -66,8 +67,8 @@ func index(ctx iris.Context) {
 	}
 
 	user := userdata.User{
-		FirstName: "Sravan",
-		LastName:  "Kilaru",
+		FirstName: input_reader.ConsoleInput("Enter your first name"),
+		LastName:  input_reader.ConsoleInput("Enter your last name"),
 		Github:    "https://github.com/kilarusravankumar",
 		Twitter:   "https://twitter.com/sravan2331993",
 		Education: education,
